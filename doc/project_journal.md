@@ -36,3 +36,36 @@ on in EDA, directly addressing the task brief.
 ### Next step
 Data cleaning — drop empty rows, drop or retain Frequency (zero variance),
 investigate incomplete regions.
+
+## 2026-07-08
+
+Completed data cleaning for Unemployment Analysis (02_data_cleaning.ipynb).
+
+### Nulls and duplicates
+28 fully empty rows dropped (768 → 740). Confirmed 0 genuine duplicates — the
+27 flagged by .duplicated() were entirely the empty rows.
+
+### Frequency
+Confirmed the 'Monthly'/' Monthly' whitespace split (381/359) from data
+understanding was real. Cleaned and dropped — constant value, zero variance.
+
+### Date
+Converted to datetime64 with dayfirst=True, required for all later time-based
+analysis.
+
+### Region completeness
+Initially checked region-by-region by eye, which produced two inaccurate notes
+(Sikkim's gap was attributed entirely to Rural, and Chandigarh's Urban shortfall
+was missed). Replaced with a systematic groupby(['Region','Area']).size() check
+across all 28 regions at once — good reminder that manual inspection of printed
+row dumps doesn't scale and is easy to miscount. Found 8 regions with gaps,
+Chandigarh (Rural entirely absent) and Sikkim (Rural mostly absent) being the
+most significant. Decided to preserve gaps rather than impute, given how
+central the COVID-period months are to this project's purpose.
+
+### Final dataset
+740 rows x 6 columns — down from 7, after dropping Frequency once confirmed
+constant. 0 missing values. Saved to ../data/processed/unemployment_clean.csv.
+
+### Next step
+EDA — trends over time, Rural vs Urban comparison, regional distribution.

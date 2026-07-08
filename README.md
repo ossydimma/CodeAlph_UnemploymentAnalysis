@@ -91,7 +91,12 @@ Unemployment_Analysis/
 
 ## Data Cleaning Summary
 
-*To be updated after data cleaning notebook is complete.*
+- 28 fully empty rows dropped (768 → 740 rows)
+- 0 genuine duplicate rows — the 27 initially flagged were the empty rows themselves
+- Frequency column had inconsistent whitespace masking a constant value; cleaned and dropped (zero variance)
+- Date converted from string to datetime64
+- 20 of 28 regions have complete reporting; 8 have gaps, most notably Chandigarh (Rural entirely absent) and Sikkim (Rural mostly absent). Verified with a systematic groupby check rather than manual inspection. Gaps preserved as-is rather than imputed, to protect the integrity of the COVID-impact analysis
+- Final dataset: 740 rows x 6 columns (7 → 6 after dropping the constant Frequency column), saved to `data/processed/unemployment_clean.csv`
 
 ---
 

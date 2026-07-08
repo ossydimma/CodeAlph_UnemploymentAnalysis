@@ -102,7 +102,12 @@ Unemployment_Analysis/
 
 ## Exploratory Data Analysis
 
-*To be updated after EDA notebook is complete.*
+- Estimated Unemployment Rate is heavily right-skewed: mean 11.79%, median 8.35%, max 76.74% (Puducherry, April 2020)
+- National unemployment rate held steady around 9-10% from May 2019 to February 2020, then spiked to 23-25% by April/May 2020 — a clear COVID-lockdown signature — before starting to recede by June 2020
+- Urban areas show a consistently higher median unemployment rate than Rural (~10% vs ~6-7%), with Urban's extreme outliers (~76-77%) marginally exceeding Rural's (~74%)
+- Regional unemployment rates vary substantially; some of the most extreme values come from regions with incomplete Rural/Urban reporting (Chandigarh, Sikkim, J&K, Goa), so extremes should be interpreted with that caveat
+- Unemployment Rate correlates weakly negatively with Employed count (-0.22); Employed and Participation Rate show no meaningful correlation (0.01), reflecting that Employed is a population-scaled headcount while Participation Rate is population-independent
+- National averages in this analysis are unweighted across regions of uneven reporting completeness — treated as directional trends, not precise national statistics
 
 ---
 

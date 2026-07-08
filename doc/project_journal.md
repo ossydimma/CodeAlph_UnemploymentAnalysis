@@ -69,3 +69,41 @@ constant. 0 missing values. Saved to ../data/processed/unemployment_clean.csv.
 
 ### Next step
 EDA — trends over time, Rural vs Urban comparison, regional distribution.
+
+## 2026-07-08
+
+Completed EDA for Unemployment Analysis (03_eda.ipynb).
+
+### Bug caught before it could propagate
+Date was being reloaded as a string on every fresh CSV read (CSVs have no
+native date type), even though it was correctly converted to datetime64 in
+cleaning. Fixed with parse_dates=['Date'] in read_csv — this would have
+silently broken the COVID and seasonal-trend notebooks, which need real date
+filtering/extraction, not just something that happens to sort correctly.
+
+### Distributions
+Unemployment Rate and Employed are both heavily right-skewed; Participation
+Rate is comparatively symmetric (mean 42.63%, median 41.16%).
+
+### National trend
+Clear COVID signature: flat ~9-10% through Feb 2020, spiking to 23-25% by
+April/May 2020, starting to recede by June 2020. Added a caveat that this is
+an unweighted mean across regions with uneven reporting completeness, not a
+precise national statistic.
+
+### Rural vs Urban
+Urban has a consistently higher median unemployment rate than Rural (~10% vs
+~6-7%), with a higher/wider IQR. Both show extreme outliers above 70% from the
+April 2020 spike, Urban's slightly higher than Rural's — consistent with the
+Puducherry finding from data understanding.
+
+### Correlations
+Unemployment Rate vs Employed: -0.22 (weak). Employed vs Participation Rate:
+0.01 (essentially zero) — worth explaining rather than treating as a dead
+end: Employed is a population-scaled headcount, Participation Rate is a
+percentage, so comparing them directly across regions of very different
+sizes isn't apples-to-apples.
+
+### Next step
+COVID-19 impact analysis — precise before/after comparison, hardest-hit
+regions, Rural vs Urban difference during lockdown.

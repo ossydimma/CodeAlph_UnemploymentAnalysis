@@ -113,7 +113,16 @@ Unemployment_Analysis/
 
 ## COVID-19 Impact Analysis
 
-*To be updated after the COVID impact notebook is complete.*
+### National picture
+Unemployment held steady around 9-10% before COVID, then spiked to about 19.7%
+during lockdown (March-May 2020) — roughly double. By June 2020, it had come
+back down to 11.9%, still a bit above normal but clearly recovering.
+
+### Hardest-hit regions
+Puducherry, Jharkhand, and Tamil Nadu saw the biggest jumps (Puducherry: 1.6% → 76.7%; Jharkhand: 14.3% → 70.2%; Tamil Nadu: 2.8% → 53.2%). Puducherry and Tamil Nadu started from very low unemployment and were hit hardest in relative terms, while Jharkhand was already struggling before COVID and got worse on top of that. Chandigarh shows the smallest change, but its data is incomplete (see Data Cleaning Summary), so this likely reflects missing data rather than being unaffected.
+
+### Rural vs Urban
+Both areas rose by almost the same raw amount (Rural: +66.4 points, Urban: +65.9 points). But since Rural started from a lower baseline (8.1% vs Urban's 10.8%), the shock was proportionally bigger for Rural — its rate multiplied by about 9x versus Urban's 7x. COVID hit both areas by a similar real amount, but it was a bigger relative shock for Rural.
 
 ---
 

@@ -107,3 +107,40 @@ sizes isn't apples-to-apples.
 ### Next step
 COVID-19 impact analysis — precise before/after comparison, hardest-hit
 regions, Rural vs Urban difference during lockdown.
+
+## 2026-07-09
+
+Completed COVID-19 impact analysis (04_covid_impact_analysis.ipynb).
+
+### Approach
+Split the data into three periods: Before (May 2019-Feb 2020), During (March-May
+2020), Recovery (June 2020 onward). Caught and fixed an inconsistency where an
+early version of the region/area comparison used a different period boundary
+than the Before/During/Recovery split already built — fixed by reusing the same
+Period column everywhere instead of a second, slightly different filter.
+
+### National picture
+Average unemployment rate: 9.5% before, 19.7% during (roughly double), 11.9%
+by the recovery period — not fully back to normal yet in this data.
+
+### Region ranking
+Tried a percent-change column first, but it produced misleading numbers for
+regions with a very low starting rate (Puducherry looked like a 4717% increase)
+— small starting numbers make percent change blow up even for a normal-sized
+jump. Replaced it with a straightforward point-change (Worst - Normal) as the
+primary number, plus a "times higher" multiplier as a secondary, easier-to-read
+version of relative change.
+
+Puducherry, Jharkhand, and Tamil Nadu had the largest point changes. Noted
+Chandigarh's small change should be read cautiously given its incomplete data,
+not as evidence it was unaffected.
+
+### Rural vs Urban
+Both areas rose by almost the same raw amount (~66 points each), but Rural's
+relative shock was bigger (9x vs Urban's 7x) since it started from a lower
+baseline. COVID narrowed the story to "similar real impact, bigger relative
+hit for Rural."
+
+### Next step
+Seasonal trends — checking whether unemployment has a normal up-and-down
+pattern by month, separate from the COVID shock.

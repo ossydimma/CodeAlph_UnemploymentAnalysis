@@ -170,3 +170,33 @@ isn't really there.
 ### Next step
 Final notebook — pull cleaning, EDA, COVID impact, and seasonal findings
 together into one set of insights and recommendations.
+
+## 2026-07-10
+
+Completed Unemployment Analysis project — CodeAlpha internship Task 2.
+
+### Final notebook
+Pulled together every earlier finding into plain insights and specific
+recommendations, rather than just restating charts. Main throughline: COVID
+caused a real, sharp, nationwide shock (unemployment roughly doubled), hit
+some regions much harder than others for different underlying reasons, and
+hit Rural areas proportionally harder despite a similar raw increase.
+
+### Project-wide lessons
+- Caught and fixed several real bugs across notebooks (stale-kernel variable
+  bugs, a misleading percent-change calculation, an out-of-order group
+  average, a chart with the wrong date ordering) — good reminder to always
+  test with Restart & Run All before calling a notebook done, since code that
+  runs fine in an existing session can still be silently broken.
+- The most valuable finding wasn't a chart — it was recognizing what the data
+  COULDN'T prove (a repeating seasonal pattern) and saying so plainly instead
+  of overclaiming.
+- Revisited an early project decision (setting aside a second dataset) later
+  with a fairer comparison method, and confirmed the original call was
+  reasonable even though the first comparison test had been flawed — good
+  example of double-checking earlier work rather than assuming it still holds.
+
+### Final state
+All 6 notebooks complete: data understanding, cleaning, EDA, COVID impact
+analysis, seasonal trends, and insights/recommendations. README and journal
+fully updated.

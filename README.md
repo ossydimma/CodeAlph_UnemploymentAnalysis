@@ -142,7 +142,30 @@ behave the same way across 2-3+ different years, which this dataset can't show.
 
 ## Insights and Policy Recommendations
 
-*To be updated after the final notebook is complete.*
+### Key Insights
+
+1. **This was a genuine emergency, not a normal dip.** National unemployment roughly doubled during lockdown (9.5% → 19.7%), far beyond normal month-to-month movement.
+
+2. **Different regions need different kinds of help.** Puducherry and Tamil Nadu were doing fine before COVID and crashed hard (1.6% → 76.7% and 2.8% → 53.2%) — they need fast-recovery support. Jharkhand was already struggling before COVID (14.3%) and got worse (70.2%) — it needs longer-term support, not just a COVID bounce-back.
+
+3. **Rural areas had less cushion to absorb the shock.** Rural and Urban rose by nearly the same raw amount (+66.4 vs +65.9 points), but Rural's relative shock was bigger (~9x its normal rate vs ~7x for Urban) since it started from a lower baseline.
+
+4. **No proven seasonal pattern — don't plan around one.** Only ~14 months of data means most calendar months appear once; the only large change in the dataset is the COVID shock itself, not a normal yearly cycle.
+
+5. **Some regions' data is less trustworthy.** Chandigarh and a few others have incomplete reporting — their "smallest change" numbers likely reflect missing data, not being unaffected.
+
+### Recommendations
+
+- Treat the COVID period as an emergency response, not routine policy
+- Prioritize relief spending toward Puducherry, Jharkhand, and Tamil Nadu first, with different support for sudden-crash regions vs. already-struggling ones
+- Design rural-specific support rather than adapting urban programs
+- Don't plan future policy around an assumed seasonal unemployment cycle
+- Improve data collection completeness for smaller regions
+
+### Limitations
+Short time span (14 months, can't prove seasonality), incomplete reporting in
+several regions, unweighted national/regional averages, and findings specific
+to India's COVID period rather than generalizable to other countries or shocks.
 
 ---
 
@@ -151,11 +174,11 @@ behave the same way across 2-3+ different years, which this dataset can't show.
 | Phase | Notebook | Status |
 |-------|----------|--------|
 | Data understanding | 01_data_understanding.ipynb | ✅ Complete |
-| Data cleaning | 02_data_cleaning.ipynb | ✅ Complete. |
-| Exploratory analysis | 03_eda.ipynb | ✅ Complete. |
+| Data cleaning | 02_data_cleaning.ipynb | ✅ Complete |
+| Exploratory analysis | 03_eda.ipynb | ✅ Complete |
 | COVID-19 impact analysis | 04_covid_impact_analysis.ipynb | ✅ Complete. |
-| Seasonal trends | 05_seasonal_trends.ipynb | ⏳ Pending |
-| Insights & recommendations | 06_insights_and_recommendations.ipynb | ⏳ Pending |
+| Seasonal trends | 05_seasonal_trends.ipynb | ✅ Complete |
+| Insights & recommendations | 06_insights_and_recommendations.ipynb | ✅ Complete |
 
 ---
 

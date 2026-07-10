@@ -128,7 +128,15 @@ Both areas rose by almost the same raw amount (Rural: +66.4 points, Urban: +65.9
 
 ## Seasonal Trends
 
-*To be updated after the seasonal trends notebook is complete.*
+**Can we prove a real, repeating yearly pattern? No — and that's worth saying
+plainly.** We only have about 14 months of data, so almost every calendar
+month appears just once. Proving a true "season" needs the same month to
+behave the same way across 2-3+ different years, which this dataset can't show.
+
+**What we can honestly say:**
+- Before COVID, the unemployment rate stayed fairly steady, roughly 9-10%, with only small normal ups and downs — no big swings
+- The only large, sudden change in the whole dataset is the COVID spike in April/May 2020 (national average jumped to 23.6% in April), which is a one-time shock, not a seasonal pattern
+- Looking at the data region by region, the COVID spike shows up across almost every region at the same time — confirming it was a nationwide shock, not something limited to a few places (matches the finding in COVID-19 Impact Analysis)
 
 ---
 
@@ -143,9 +151,9 @@ Both areas rose by almost the same raw amount (Rural: +66.4 points, Urban: +65.9
 | Phase | Notebook | Status |
 |-------|----------|--------|
 | Data understanding | 01_data_understanding.ipynb | ✅ Complete |
-| Data cleaning | 02_data_cleaning.ipynb | ⏳ Pending |
-| Exploratory analysis | 03_eda.ipynb | ⏳ Pending |
-| COVID-19 impact analysis | 04_covid_impact_analysis.ipynb | ⏳ Pending |
+| Data cleaning | 02_data_cleaning.ipynb | ✅ Complete. |
+| Exploratory analysis | 03_eda.ipynb | ✅ Complete. |
+| COVID-19 impact analysis | 04_covid_impact_analysis.ipynb | ✅ Complete. |
 | Seasonal trends | 05_seasonal_trends.ipynb | ⏳ Pending |
 | Insights & recommendations | 06_insights_and_recommendations.ipynb | ⏳ Pending |
 

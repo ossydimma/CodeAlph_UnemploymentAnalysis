@@ -144,3 +144,29 @@ hit for Rural."
 ### Next step
 Seasonal trends — checking whether unemployment has a normal up-and-down
 pattern by month, separate from the COVID shock.
+
+## 2026-07-10
+
+Completed seasonal trends analysis (05_seasonal_trends.ipynb).
+
+### Caught a misleading result before it went into the docs
+The first version of the "monthly average" chart made April look like it's
+always the worst month (23.6% average). Turned out that's just because April
+2020 (the COVID month) is the ONLY April in the whole dataset — the "average"
+was really just one data point pretending to be a pattern. Added a clear
+warning on that chart and built a proper before-COVID-only version instead,
+which shows unemployment held steady around 9-10% normally.
+
+### Regional heatmap
+Switched the regional comparison from a 28-line chart (unreadable with that
+many regions) to a heatmap — regions down one side, months across the top.
+Shows the COVID spike hitting almost every region at the same time.
+
+### Key lesson
+With only 14 months of data, "seasonal" claims aren't provable — this
+notebook is honest about that limit rather than overclaiming a pattern that
+isn't really there.
+
+### Next step
+Final notebook — pull cleaning, EDA, COVID impact, and seasonal findings
+together into one set of insights and recommendations.
